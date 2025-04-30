@@ -1,0 +1,45 @@
+<section class="section-background">
+    <div class="form-section">
+        <div class="text">
+            <h3>
+                #Venha ser Furioso
+            </h3>
+            <p>
+                Venha fazer parte da comunidade Furia, preencha o formulário abaixo:
+            </p>
+        </div>
+        <form [formGroup]="usuarioForm">
+            <label for="nome">Nome</label>
+            <input id="nome" formControlName="nome" />
+            <label for="email">Email</label>
+            <input id="email" formControlName="email">
+            <label for="endereco">Endereço</label>
+            <input id="endereco" formControlName="endereco">
+            <label for="cpf">CPF</label>
+            <input id="cpf" formControlName="cpf">
+            <label for="instagram">Instagram</label>
+            <input id="instagram" formControlName="instagram">
+            <label for="x">X</label>
+            <input id="x" formControlName="x">
+            <label for="teleforne">Telefone</label>
+            <input id="telefone" formControlName="telefone">
+
+            <!-- No seu template -->
+            <button class="send-form" (click)="sendTo()" [disabled]="!usuarioForm.valid || loading()">
+
+                @if (!loading()) {
+                <span>Enviar</span>
+                }
+                @else {
+                <span>
+                    <i class="spinner"></i> Enviando...
+                </span>
+                }
+            </button>
+
+        </form>
+    </div>
+    <div class="logo-content">
+        <img ngSrc="./assets/logo.png" width="300" height="300" priority alt="Logo Furia" />
+    </div>
+</section>

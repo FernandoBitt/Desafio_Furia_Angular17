@@ -1,0 +1,21 @@
+<header class="app-header">
+    <div class="header-container">
+        <div class="logo-content">
+            <img ngSrc="./assets/logo.png" width="70" height="70" priority alt="Logo Furia"/>
+            <span class="titulo">FURIA</span>
+        </div>
+        
+        <div class="nav-content">  <!-- Alterado de nav-menu-content para nav-content -->
+            <nav class="nav-menu">
+                <button class="nav-button-produtos" (click)="navigateTo('https://www.furia.gg/')">Produtos</button>
+                <button class="nav-button" (click)="navigateTo('https://www.instagram.com/furia.apparel/')">Comunidade</button>
+                <button class="nav-button" (click)="navigateTo('https://wa.me/5511993404466')">Contato</button>
+            </nav>
+
+            <div class="auth-buttons">
+                <button class="auth-button entrar" (click)="navigateTo('login')">Entrar</button>
+                <button class="auth-button registrar" (click)="navigateTo('registro')">Registrar</button>
+            </div>
+        </div>
+    </div>
+</header>
