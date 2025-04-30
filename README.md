@@ -1,3 +1,14 @@
+# Desafio_Furia
+Desafio de Projeto Furia - Chatbox de integração com usuários e Coleta de Dados para Análise de Perfil
+
+## TECNOLOGIAS:
+* Angular
+* TypeScript / JavaScript
+* HTML / SCSS
+
+API BackEnd disponível em url: https://github.com/FernandoBitt/Desafio_Furia_SpringBoot
+
+
 # FuriaLandingPage
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.16.
