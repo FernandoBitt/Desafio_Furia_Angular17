@@ -6,7 +6,7 @@
     display: flex;
 
     .form-section {
-        max-width: 600px;
+        max-width: 500px;
         padding: 2rem;
         background-color: #f8f8f8;
         border-radius: 10px;
@@ -25,18 +25,20 @@
             letter-spacing: 1px;
             font-weight: 700;
             
+            
           }
       
           p {
             font-size: 1.1rem;
-            color: #555;
+            color: #6c6c6c;
+            margin-bottom: 4rem;
           }
         }
       
         form {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 0.5rem;
+          gap: 1rem;
           
       
           label {
@@ -44,7 +46,7 @@
             margin-bottom: 0.5rem;
             font-weight: 600;
             color: #333;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
           }
       
           input {

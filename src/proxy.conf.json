@@ -1,0 +1,10 @@
+{
+    "/n8n-proxy": {
+      "target": "http://localhost:5678",
+      "secure": false,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/n8n-proxy": ""
+      }
+    }
+  }

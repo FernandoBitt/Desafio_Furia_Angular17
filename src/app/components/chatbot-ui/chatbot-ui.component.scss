@@ -1,52 +1,54 @@
 .chat-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: 400px;
-  max-height: 400px; /* Altura máxima fixa */
+  height: 100vh; /* Altura total da viewport */
+  max-height: 600px; /* Altura máxima do chat */
+  min-height: 400px; /* Altura mínima do chat */
   position: relative;
-  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse */
+  border: 1px solid #ddd; /* Opcional: borda para visualização */
+  border-radius: 8px; /* Opcional: bordas arredondadas */
+  overflow: hidden; /* Garante que nada ultrapasse o container */
 
   .messages-wrapper {
-    flex: 1; /* Ocupa todo espaço disponível */
-    overflow-y: auto; /* Rolagem vertical quando necessário */
+    flex: 1; /* Ocupa todo o espaço disponível */
+    overflow-y: auto; /* Barra de rolagem vertical quando necessário */
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; /* Espaço entre mensagens */
+    gap: 0.5rem;
+    height: calc(100% - 68px); /* Altura total menos a altura do input */
+    min-height: 300px; /* Altura mínima para a área de mensagens */
 
-    /* Estilo para garantir que novas mensagens rolem para cima */
-    scroll-behavior: smooth;
-    overscroll-behavior-y: contain;
-    
-    p {
-      margin: 0; /* Removemos as margens verticais */
+    /* Estilo para mensagens do USUÁRIO */
+    .user-message {
+      align-self: flex-end;
+      background: #4a6baf;
+      color: white;
       padding: 0.75rem 1rem;
-      border-radius: 18px;
-      background: #f0f0f0;
-      display: inline-block;
+      border-radius: 18px 18px 0 18px;
       max-width: 80%;
       word-break: break-word;
-      
-      &.user {
-        background: #4a6baf;
-        color: white;
-        margin-left: auto;
-        align-self: flex-end;
-      }
-      
-      &:not(.user) {
-        align-self: flex-start;
-      }
+      margin-left: auto;
+    }
+
+    /* Estilo para mensagens do BOT */
+    .bot-message {
+      align-self: flex-start;
+      background: #f0f0f0;
+      padding: 0.75rem 1rem;
+      border-radius: 18px 18px 18px 0;
+      max-width: 80%;
+      word-break: break-word;
     }
   }
 
   .input-wrapper {
     display: flex;
     gap: 0.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid #ddd;
-    margin-top: auto; /* Fixa na base */
+    padding: 1rem;
+    //border-top: 1px solid #ddd;
+    //background: white;
+    flex-shrink: 0; /* Impede que o input diminua */
 
     input {
       flex-grow: 1;
@@ -72,20 +74,20 @@
   }
 }
 
-.messages-wrapper {
-  scrollbar-width: thin;
-  scrollbar-color: #4a6baf #f0f0f0;
+/* Barra de rolagem personalizada */
+.messages-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
 
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  &::-webkit-scrollbar-track {
-    background: #f0f0f0;
-  }
-  
-  &::-webkit-scrollbar-thumb {
-    background-color: #4a6baf;
-    border-radius: 3px;
-  }
+.messages-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.messages-wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.messages-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
