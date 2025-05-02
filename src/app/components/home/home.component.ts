@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import { UsuarioFormComponent } from '../usuario-form/usuario-form.component';
 import { FooterComponent } from "../footer/footer.component";
+import { ChatbotUiComponent } from '../chatbot-ui/chatbot-ui.component';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,8 @@ import { FooterComponent } from "../footer/footer.component";
   imports: [
     HeaderComponent,
     UsuarioFormComponent,
-    FooterComponent
+    FooterComponent,
+    ChatbotUiComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

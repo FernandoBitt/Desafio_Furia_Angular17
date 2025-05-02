@@ -1,0 +1,14 @@
+<div class="chat-container">
+  <!-- Área de mensagens com scroll -->
+  <div class="messages-wrapper">
+    @for (msg of messages; track msg.text) {
+      <p [class.user]="msg.isUser">{{ msg.text }}</p>
+    }
+  </div>
+  
+  <!-- Input fixo na base -->
+  <div class="input-wrapper">
+    <input [(ngModel)]="userInput" placeholder="Digite sua mensagem...">
+    <button (click)="sendMessage()">Enviar</button>
+  </div>
+</div>
