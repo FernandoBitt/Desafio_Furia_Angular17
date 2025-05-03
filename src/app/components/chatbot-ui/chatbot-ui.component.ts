@@ -25,9 +25,9 @@ export class ChatbotUiComponent {
   sendMessage() {
     if (!this.sessionId.trim()) return;
 
-    // Adiciona mensagem do usuário (abordagem imutável)
+    
     this.chatInput = [...this.chatInput, { text: this.sessionId, isUser: true }];
-    this.cdr.detectChanges(); // Força a primeira atualização
+    this.cdr.detectChanges();
 
     this.chatbotService.sendMessage(this.sessionId).subscribe({
       next: (response: any) => {
@@ -38,7 +38,7 @@ export class ChatbotUiComponent {
         const botReply = this.getBotReply(response);
 
         
-        // Adiciona resposta do bot (nova abordagem)
+        // Adiciona resposta do bot
         setTimeout(() => {
           this.chatInput = [...this.chatInput, { text: botReply, isUser: false }];
           this.cdr.detectChanges();
