@@ -14,12 +14,17 @@ API BackEnd disponível em url: https://github.com/FernandoBitt/Desafio_Furia_Sp
 * Docker
 
 # ChatBot-DesafioFuria
-<h1> Workflow n8n - ChatBot:
+<h2> Workflow n8n - ChatBot:
 <img src="./src/assets/chatbot.png" alt="WorkFlow n8n Chatbot" />
 
 # Desafio_Furia_Analise_Perfil
-<h1> Workflow n8n - análise de perfil:
+<h2> Workflow n8n - análise de perfil:
 <img src="./src/assets/analiseSocial.png" alt="WorkFlow n8n Análise de Perfil" />
+
+# Prototipo de Tela LandPAge
+<h2> Prototipo da tela, projetado em Figma:
+<img src="./src/assets/prototipo.png" alt="Landpage_prototipo" />
+
 
 
 # FuriaLandingPage
